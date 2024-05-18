@@ -13,17 +13,43 @@ import {
   sepolia,
 } from 'wagmi/chains';
 import { getDefaultConfig, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+const artela = {
+  id: 11822,
+  name: 'Artela Testnet',
+  network: 'artela-testnet',
+  iconUrl: 'https://framerusercontent.com/images/xLv7JZ8nzPaZ9zk7j63YbRZHqY.png',
+  iconBackground: '#fff',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'Artela',
+    symbol: 'ART',
+  },
+  rpcUrls: {
+    public: {
+      http: [
+        'https://betanet-rpc1.artela.network',
+        'https://betanet-rpc2.artela.network'
+      ]
+    },
+    default: {
+      http: [
+        'https://betanet-rpc1.artela.network',
+        'https://betanet-rpc2.artela.network'
+      ]
+    },
+  },
+  blockExplorers: {
+    default: { name: 'SnowTrace', url: 'https://betanet-scan.artela.network/' },
+    etherscan: { name: 'SnowTrace', url: 'https://betanet-scan.artela.network/' },
+  },
+  testnet: false,
+};
 
 const config = getDefaultConfig({
   appName: 'RainbowKit App',
   projectId: 'YOUR_PROJECT_ID',
   chains: [
-    mainnet,
-    polygon,
-    optimism,
-    arbitrum,
-    base,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
+    artela
   ],
   ssr: true,
 });
