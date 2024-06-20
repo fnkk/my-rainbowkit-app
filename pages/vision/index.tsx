@@ -1,6 +1,6 @@
 "use client"
 import { useMutation } from "@tanstack/react-query";
-import { getNonce } from "./api"
+import { getNonce } from "../../api"
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 const vision = () => {
     // const getNonceQuery = useMutation({
