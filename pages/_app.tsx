@@ -55,21 +55,21 @@ const connectors = connectorsForWallets(
   }
 );
 
-// const config = createConfig({
-//   connectors,
-//   transports: {
-//     [artela.id]: http("https://betanet-rpc1.artela.network")
-//   },
-//   chains: [artela]
-// })
-const config = getDefaultConfig({
-  appName: 'RainbowKit App',
-  projectId: 'YOUR_PROJECT_ID',
-  chains: [
-    artela
-  ],
-  ssr: true,
-});
+const config = createConfig({
+  connectors,
+  transports: {
+    [artela.id]: http("https://betanet-rpc1.artela.network")
+  },
+  chains: [artela]
+})
+// const config = getDefaultConfig({
+//   appName: 'RainbowKit App',
+//   projectId: 'YOUR_PROJECT_ID',
+//   chains: [
+//     artela
+//   ],
+//   ssr: true,
+// });
 
 const client = new QueryClient();
 
