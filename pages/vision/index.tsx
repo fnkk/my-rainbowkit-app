@@ -16,6 +16,7 @@ const vision = () => {
                 getNonce
             </button> */}
             <ConnectButton/>
+            000000
         </div>
     )
 }
