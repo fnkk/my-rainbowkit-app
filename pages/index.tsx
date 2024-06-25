@@ -3,6 +3,7 @@ const page = () => {
   return (
     <div>
       <ConnectButton />
+      00009999000
     </div>
   )
 }
